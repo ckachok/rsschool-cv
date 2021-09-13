@@ -11,7 +11,7 @@ function getTime() {
 }
 
 function showMenu() {
-  if (!btnBurger.classList.contains('burger-menu_active')) {
+  if (!btnBurger.classList.contains('burger-menu--active')) {
     hideScroll();
   } else {
     showScroll();
