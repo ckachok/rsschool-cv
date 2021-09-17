@@ -5,11 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/shades-of-purple.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="assets/favicon/favicon16.ico" sizes="16x16">
   <link rel="icon" href="assets/favicon/favicon24.ico" sizes="24x24">
   <link rel="icon" href="assets/favicon/favicon32.ico" sizes="32x32">
   <title>Resume</title>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/shades-of-purple.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> -->
 </head>
 <body>
   <header class="header">
@@ -21,10 +27,10 @@
       <nav class="header__menu menu">
         <ul class="menu__list">
           <li class="menu__item">
-            <a href="" class="menu__link">About</a>
+            <a href="#about" class="menu__link">About</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Skills</a>
+            <a href="#skills" class="menu__link">Skills</a>
           </li>
           <li class="menu__item">
             <a href="" class="menu__link">Code</a>
@@ -60,7 +66,7 @@
         </div>
       </div>
     </section>
-    <section class="about">
+    <section class="about" id="about">
       <div class="about__container container">
         <h2 class="section-title">About Me</h2>
         <div class="about__text-content">
@@ -102,7 +108,7 @@
         </div>
       </div>
     </section>
-    <section class="skills">
+    <section class="skills" id="skills">
       <div class="skills__container container">
         <h2 class="skills__section-title section-title section-title_non-white-bg">Skills</h2>
         <div class="skills__text-content">
@@ -133,6 +139,187 @@
             </li>
           </ul>
         </div>
+      </div>
+    </section>
+    <section class="code">
+      <div class="code__container container">
+        <h2 class="section-title">Code Examples</h2>
+        <div class="example">
+          <div class="example__item">
+            <a class="example__link" href="https://www.codewars.com/kata/56f935002e6c0d55fa000d92" target="_blank">Animals and Inheritance</a>
+            <pre class="example__code"><code class="javascript">
+class Shark extends Animal {
+  constructor(name, age, status) {
+    super(name, age, 0, 'shark', status);
+  }
+}
+
+class Cat extends Animal {
+  constructor(name, age, status) {
+    super(name, age, 4, 'cat', status);
+  }
+
+  introduce() {
+    return `${super.introduce()}  Meow meow!`;
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, age, status, master) {
+    super(name, age, 4, 'dog', status);
+    this.master = master;
+  }
+  
+  greetMaster() {
+    return `Hello ${this.master}`;
+  }
+}
+            </code></pre>
+          </div>
+          <div class="example__item">
+            <a class="example__link" href="https://www.codewars.com/kata/56fcc1ee45040039ab0016da" target="_blank">Cubes and Setters</a>
+            <pre class="example__code"><code class="javascript">
+class SiegeState {
+  constructor(canMove, damage) {
+    this.canMove = false;
+    this.damage = 20;  
+  }
+}
+
+class TankState {
+  constructor(canMove, damage) {
+    this.canMove = true;
+    this.damage = 5;  
+  }
+}
+
+class Tank {
+  constructor(state, canMove, damage) {
+    this.state = new TankState();    
+  }
+
+  get canMove() {
+    return this.state.canMove;
+  }
+  get damage() {
+    return this.state.damage;
+  }
+}
+            </code></pre>            
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="experience">
+      <div class="experience__container container">
+        <h2 class="experience__section-title section-title section-title_non-white-bg">Experience</h2>
+        <div class="experience__slider slider">
+          <button class="slider__btn-left" aria-label="Button to switch to the prev slide">
+            <img class="arrow-left" src="assets/svg/slider-arrow.svg" alt="Left arrow">
+          </button>
+          <div class="slider__container">
+            <div class="slider__content">
+              <figure class="slider__slide slide">
+                <a class="slide__link" href="https://rolling-scopes-school.github.io/ckachok-JSFE2021Q1/wildlife/" target="_blank">
+                  <img class="slide__image" src="assets/img/experience/wildlife.jpg" alt="Fox in the forest. Wildlife website.">
+                </a>
+                <figcaption class="slide__description">Wildlife</figcaption>
+              </figure>
+              <figure class="slider__slide slide">
+                <a class="slide__link" href="https://rolling-scopes-school.github.io/ckachok-JSFEPRESCHOOL/museum/" target="_blank">
+                  <img class="slide__image" src="assets/img/experience/museum.jpg" alt="Louvre at night. Louvre website.">
+                </a>
+                <figcaption class="slide__description">Museum</figcaption>
+              </figure>
+              <figure class="slider__slide slide">
+                <a class="slide__link" href="https://rolling-scopes-school.github.io/ckachok-JSFE2021Q1/online-zoo/pages/landing/landing.html" target="_blank">
+                  <img class="slide__image" src="assets/img/experience/online-zoo.jpg" alt="The panda is eating bamboo. Online-zoo website">                  
+                </a>
+                <figcaption class="slide__description">Online zoo</figcaption>
+              </figure>
+              <figure class="slider__slide slide">
+                <a class="slide__link" href="https://rolling-scopes-school.github.io/ckachok-JSFEPRESCHOOL/vertical-slider/" target="_blank">
+                  <img class="slide__image" src="assets/img/experience/vertical-slider.jpg" alt="Vertical slide webpage">
+                </a>
+                <figcaption class="slide__description">Vertical slider</figcaption>
+              </figure>
+              <figure class="slider__slide slide">
+                <a class="slide__link" href="https://rolling-scopes-school.github.io/ckachok-JSFEPRESCHOOL/custom-video-player/" target="_blank">
+                  <img class="slide__image" src="assets/img/experience/custom-video-player.jpg" alt="Custom video player webpage">
+                </a>
+                <figcaption class="slide__description">Custom video<br>player</figcaption>
+              </figure>
+              <figure class="slider__slide slide">
+                <a class="slide__link" href="https://rolling-scopes-school.github.io/ckachok-JSFE2021Q1/virtual-piano/" target="_blank">
+                  <img class="slide__image" src="assets/img/experience/virtual-piano.jpg" alt="Virtual piano webpage">
+                </a>
+                <figcaption class="slide__description">Virtual piano</figcaption>
+              </figure>
+              <figure class="slider__slide slide">
+                <a class="slide__link" href="https://rolling-scopes-school.github.io/ckachok-JSFE2021Q1/photo-filter/" target="_blank">
+                  <img class="slide__image" src="assets/img/experience/photo-filter.jpg" alt="Photo filter webpage">
+                </a>
+                <figcaption class="slide__description">Photo filter</figcaption>
+              </figure>
+            </div>
+          </div>
+          <button class="slider__btn-right" aria-label="Button to switch to the next slide">
+            <img class="arrow-right" src="assets/svg/slider-arrow.svg" alt="Right arrow">
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="education">
+      <div class="education__container container">
+        <h2 class="section-title">Education</h2>
+        <div class="education__content">
+          <div class="education__text-content">
+            <ol class="education__list list-education_ordered">
+              <li class="list-education_ordered__item">
+                <strong>2007 - 2011</strong><br class="br"> (secondary special education) <br class="br"><strong>«Minsk State Higher Radio Engineering College»:</strong>
+                <ul class="education__list list-education_unordered">
+                  <li class="list-education_unordered__item">
+                    <strong><em>Department:</em></strong> radio engineering
+                  </li>
+                  <li class="list-education_unordered__item">
+                    <strong><em>Specialty:</em></strong> design and manufacture of radioelectronic facilities
+                  </li>
+                  <li class="list-education_unordered__item">
+                    <strong><em>Qualification:</em></strong> technician-technologist
+                  </li>
+                </ul>
+              </li>
+              <li class="list-education_ordered__item">
+                <strong>2011 - 2014</strong><br class="br"> (higher education) <br class="br"><strong>«Minsk State Higher Radio Engineering College»:</strong>
+                <ul class="education__list list-education_unordered">
+                  <li class="list-education_unordered__item">
+                    <strong><em>Faculty:</em></strong> professional training
+                  </li>
+                  <li class="list-education_unordered__item">
+                    <strong><em>Specialty:</em></strong> professional training (radioelectronics)
+                  </li>
+                  <li class="list-education_unordered__item">
+                    <strong><em>Qualification:</em></strong> teacher-engineer
+                  </li>
+                </ul>
+              </li>
+              <li class="list-education_ordered__item">
+                <strong>2020 - 2021</strong><br class="br"> (courses) <br class="br"><strong>«The Rolling Scopes»:</strong>
+                <ul class="education__list list-education_unordered">
+                  <li class="list-education_unordered__item">
+                    <strong><em>Direction:</em></strong> javascript / front-end
+                  </li>
+                  <li class="list-education_unordered__item">
+                    <strong><em>Status:</em></strong> active student
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+          <div class="education__visual-content">
+            <img class="education__image" src="assets/img/education/person-and-Newton's-cradle.png" alt="Person and Newton's Cradle">
+          </div>
+        </div>    
       </div>
     </section>
   </main>
