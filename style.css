@@ -43,7 +43,7 @@
 /* Basic styles */
 * {
   box-sizing: border-box;
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
 
 body {
@@ -1065,7 +1065,7 @@ a {
   }
 
   .education__text-content {
-    max-width: 670px;
+    max-width: 555px;
     margin: 0 auto 30px;
   }
 
@@ -1096,5 +1096,284 @@ a {
 
   .br {
     display: block;
+  }
+}
+
+/* Section - English */
+.english {
+  background-image: url(assets/img/english/person-climbing-the-red-ladder.png);
+  background-repeat: no-repeat;
+  background-size: 23%;
+  background-position: 5.1% 92%;
+}
+.english__container {
+  padding-top: 60px;
+  padding-bottom: 50px;
+}
+
+.english__section-title {
+  width: 250px;
+  margin-bottom: -10px;
+}
+.english__content {
+}
+
+.english__text-content {
+  text-align: center;
+}
+.english__text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.75em;
+  line-height: 1.25;
+  color: #24292e;
+}
+.english__text_big {
+  font-size: 7.5vw;
+}
+.english__link {
+  color: #e5ab7b;
+}
+
+.english__visual-content {
+  position: relative;
+  width: 71%;
+  margin: 0 auto;
+  padding: 0 0 40% 0;
+}
+
+.english__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  opacity: 0.1;
+  transition: opacity 2s;
+}
+
+.english__text_video {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 5vw;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.english__video:hover .english__text_video {
+  opacity: 0;
+}
+
+.english__video:hover {
+  opacity: 1;
+  transition: opacity 2s;
+}
+
+@media (max-width: 1410px) {
+  .english__text {
+    max-width: 1100px;
+    margin: 0 auto 30px;
+  }
+}
+
+@media (max-width: 1010px) {
+  .english__section-title {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 864px) {
+  .english {
+    background-position: 5.1% 81%;
+  }
+
+  .english__section-title {
+    margin-bottom: 20px;
+  }
+
+  .english__text {
+    font-size: 1.5em;
+  }
+
+  .english__visual-content {
+    width: 81.469%;
+    padding: 0 0 46.02% 0;
+  }
+
+  .english__text_video {
+    font-size: 6vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .english {
+    background-size: 36%;
+    background-position: 55.1% 79%;
+  }
+
+  .english__section-title {
+    width: 230px;
+    margin-bottom: 30px;
+  }
+
+  .english__text {
+    max-width: 260px;
+    font-size: 1.25em;
+  }
+
+  .english__visual-content {
+    width: 94.32%;
+    padding: 0 0 52.955% 0;
+  }
+
+  .english__video {
+    border-radius: 25px;
+  }
+
+  .english__text_video {
+    max-width: none;
+    font-size: 6vw;
+  }
+}
+
+/* Section Contacts */
+.contacts {
+  background-color: #fff;
+}
+.contacts__container {
+  padding: 50px 30px;
+  text-align: center;
+}
+.contacts__text {
+  margin: 0 0 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.75em;
+  line-height: 1.25;
+  color: #24292e;
+}
+.contacts__form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form {
+  display: grid;
+  grid-template-areas: 
+    "name email"
+    "textarea textarea"
+    "button button";
+  grid-template-rows: 50px 190px;
+  grid-template-columns: 185px auto;
+  grid-gap: 20px;
+}
+.form__field {
+  padding: 15px 20px;
+  font-family: "Segoe UI";
+  font-weight: 400;
+  font-size: 1em;
+  background-color: #f4e6cd;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  outline: none;
+  transition: all .8s;
+}
+
+.form__field:hover {
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.form__field:focus {
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+input[type="text"]:required:valid,
+input[type="email"]:required:valid,
+textarea:required:valid {
+  background-color: #fff;
+  border: 1px solid #f4e6cd;
+}
+
+.contacts__list {}
+
+.contacts__item {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 1.75;
+  color: #24292e;
+}
+
+.form__field_name {
+  grid-area: name;
+}
+
+.form__field_email {
+  grid-area: email;
+}
+
+.form__field_textarea {
+  grid-area: textarea;
+  resize: none;
+}
+
+.form__button { 
+  grid-area: button;
+  width: 200px;
+  height: 50px;
+  margin: 10px auto 30px;
+  font-family: "Segoe UI";
+  font-weight: 400;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  border-radius: 10px;
+  background-color: #34547a;
+  color: #fff;
+  transition: all .8s;
+}
+
+.form__button:hover {
+  background-color: #f4e6cd;
+  color: #24292e;
+}
+
+.form__button:active {
+  background-color:#253b56;
+}
+
+@media (max-width: 624px) {
+  .contacts__text {
+    font-size: 1.5em;
+  }
+
+  .form {
+  grid-template-areas:
+    "name name"
+    "email email"
+    "textarea textarea"
+    "button button";
+    grid-template-rows: 50px 50px 190px;
+    grid-template-columns: auto;
+  }
+
+  .contacts__item {
+    font-size: 1.25em;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacts__text {
+    font-size: 1.25em;
+  }
+
+  .contacts__item {
+    font-size: 1em;
   }
 }
