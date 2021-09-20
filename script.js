@@ -67,10 +67,11 @@ const onMenuLinkCLick = (event) => {
     
     window.scrollTo({
       top: goToBlockValue,
-      behavior: 'smooth',
     });
 
-    showMenu();
+    if (btnBurger.classList.contains('burger-menu_active')) {
+      showMenu();
+    }
   
     event.preventDefault();
   }
