@@ -17,32 +17,32 @@
 <body>
   <header class="header">
     <div class="header__container container">
-      <a class="header__logo logo" href="index.html">
-        <img class="logo__icon" src="assets/img/header/small-logo-header.gif" alt="Logo">
+      <a class="header__logo" href="index.html">
+        <img class="header__logo-icon" src="assets/img/header/small-logo-header.gif" alt="Logo">
       </a>
       <span class="header__main-text">Resume</span>
       <nav class="header__menu menu">
         <ul class="menu__list">
           <li class="menu__item">
-            <a href="#about" class="menu__link">About</a>
+            <a class="menu__link" href="#" data-link=".about">About</a>
           </li>
           <li class="menu__item">
-            <a href="#skills" class="menu__link">Skills</a>
+            <a class="menu__link" href="#" data-link=".skills">Skills</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Code</a>
+            <a class="menu__link" href="#" data-link=".code">Code</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Experience</a>
+            <a class="menu__link" href="#" data-link=".experience">Experience</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Education</a>
+            <a class="menu__link" href="#" data-link=".education">Education</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">English</a>
+            <a class="menu__link" href="#" data-link=".english">English</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Contacts</a>
+            <a class="menu__link" href="#" data-link=".contacts">Contacts</a>
           </li>
         </ul>
       </nav>
@@ -63,7 +63,7 @@
         </div>
       </div>
     </section>
-    <section class="about" id="about">
+    <section class="about">
       <div class="about__container container">
         <h2 class="section-title">About Me</h2>
         <div class="about__text-content">
@@ -105,7 +105,7 @@
         </div>
       </div>
     </section>
-    <section class="skills" id="skills">
+    <section class="skills">
       <div class="skills__container container">
         <h2 class="skills__section-title section-title section-title_non-white-bg">Skills</h2>
         <div class="skills__text-content">
@@ -337,7 +337,7 @@ class Tank {
         </div>    
       </div>
     </section>
-    <section class="contacts" id="contacts">
+    <section class="contacts">
       <div class="contacts__container container">
         <h2 class="section-title">Contacts</h2>
         <p class="contacts__text">You can contact me using the form or in another way convenient for you below.</p>
@@ -359,7 +359,10 @@ class Tank {
                     id="form-textarea"
                     placeholder="Your message"
                     required></textarea>
-          <button class="form__button" id="form-button" type="submit">Send</button>
+          <button class="form__button"
+                  id="form-button"
+                  type="submit"
+                  aria-label="Send form">Send</button>
         </form>
         <ul class="contacts__list">
           <li class="contacts__item">
@@ -381,6 +384,59 @@ class Tank {
       </div>
     </section>
   </main>
+  <footer class="footer">
+    <div class="footer__container container">
+      <ul class="footer__social social">
+        <li class="social__item social__item_instagram">
+          <a class="social__link" href="https://www.instagram.com/mefilion/" target="_blank"></a>
+        </li>
+        <li class="social__item social__item_telegram">
+          <a class="social__link" href="https://t.me/Mefelion" target="_blank"></a>
+        </li>
+        <li class="social__item social__item_vk">
+          <a class="social__link" href="https://vk.com/sergeans" target="_blank"></a>
+        </li>
+        <li class="social__item social__item_github">
+          <a class="social__link" href="https://github.com/ckachok" target="_blank"></a>
+        </li>
+        <li class="social__item social__item_discord">
+          <a class="social__link" href="https://discord.gg/tVQtnFWc8c" target="_blank"></a>
+        </li>
+      </ul>
+      <span class="footer__copyright">© 2021 Mef,<br class="footer__br-copyright"> All Rights Reserved</span>
+      <a class="footer__logo" href="index.html">
+        <img class="footer__logo-icon" src="assets/img/footer/logo-footer.gif" alt="Logo">
+      </a>
+      <nav class="footer__menu menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#" data-link=".about">About</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#" data-link=".skills">Skills</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#" data-link=".code">Code</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#" data-link=".experience">Experience</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#" data-link=".education">Education</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#" data-link=".english">English</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#" data-link=".contacts">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="footer__logo-rsschool logo-rsschool" href="https://rs.school/js/" target="_blank">
+        <img class="logo-rsschool__icon" src="assets/svg/logo-rsshool.svg" alt="Logo">
+      </a>
+    </div>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>

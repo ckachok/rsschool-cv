@@ -1,7 +1,7 @@
 'use strict'
 /* Menu Burger*/
 const btnBurger = document.body.querySelector('.burger-menu');
-const menu = document.body.querySelector('.menu');
+const menu = document.body.querySelector('.header__menu');
 const menuList = document.body.querySelector('.menu__list');
 const header = document.body.querySelector('.header');
 
@@ -143,3 +143,27 @@ sliderBtnRight.addEventListener('click', () => {
     changeSlide('right');
   }
 });
+
+
+const menuLinks = document.body.querySelectorAll('.menu__link');
+
+const onMenuLinkCLick = (event) => {
+  const menuLink = event.target;
+
+  if (menuLink.dataset.link && document.body.querySelector(menuLink.dataset.link)) {
+    const goToBlock = document.querySelector(menuLink.dataset.link);
+    const goToBlockValue = goToBlock.getBoundingClientRect().top + scrollY - header.offsetHeight;
+
+    window.scrollTo({
+      top: goToBlockValue,
+    })
+
+    event.preventDefault();
+  }
+}
+
+if (menuLinks.length > 0) {
+  menuLinks.forEach(menuLink => {
+    menuLink.addEventListener('click', onMenuLinkCLick)
+  })
+}
