@@ -5,13 +5,7 @@ const menu = document.body.querySelector('.header__menu');
 const menuList = document.body.querySelector('.menu__list');
 const header = document.body.querySelector('.header');
 
-let bgTime = getTime();
-
-function getTime() {
-  return new Date().getTime();
-}
-
-function showMenu() {
+const showMenu = () => {
   if (!btnBurger.classList.contains('burger-menu_active')) {
     hideScroll();
   } else {
@@ -22,23 +16,31 @@ function showMenu() {
   menu.classList.toggle('menu_active');
 }
 
-function hideScroll() {
+const hideScroll = () => {
   let marginSize = window.innerWidth - document.body.clientWidth;
 
   if (marginSize) {
     menu.style.paddingLeft = marginSize + 'px';
     document.body.style.marginRight = marginSize + 'px';
     document.body.classList.add('hidden-scroll');
+  } else {
+    document.body.classList.add('hidden-scroll');
   }
 }
 
-function showScroll() {
+const showScroll = () => {
   menu.style.paddingLeft = '';
   document.body.style.marginRight = '';
   document.body.classList.remove('hidden-scroll');
 }
 
-btnBurger.addEventListener('click', function() {
+const getTime = () => {
+  return new Date().getTime();
+}
+
+let bgTime = getTime();
+
+const startAnimationBurger = () => {
   let fnTime = getTime();
   let timeAnimationBurger = window.getComputedStyle(menu)
                                   .getPropertyValue("transition")
@@ -48,7 +50,37 @@ btnBurger.addEventListener('click', function() {
       bgTime = fnTime;
       showMenu();
   }
-});
+}
+
+btnBurger.addEventListener('click', startAnimationBurger);
+btnBurger.addEventListener('touchstart', startAnimationBurger);
+
+/* Click on menu links */
+const menuLinks = document.body.querySelectorAll('.menu__link');
+
+const onMenuLinkCLick = (event) => {
+  const menuLink = event.target;
+
+  if (menuLink.dataset.link && document.body.querySelector(menuLink.dataset.link)) {
+    const goToBlock = document.querySelector(menuLink.dataset.link);
+    const goToBlockValue = goToBlock.getBoundingClientRect().top + scrollY - header.offsetHeight;
+    
+    window.scrollTo({
+      top: goToBlockValue,
+      behavior: 'smooth',
+    });
+
+    showMenu();
+  
+    event.preventDefault();
+  }
+}
+
+if (menuLinks.length > 0) {
+  menuLinks.forEach(menuLink => {
+    menuLink.addEventListener('click', onMenuLinkCLick);
+  })
+}
 
 /* Section Experience - Slider */
 const slider = document.body.querySelector('.slider');
@@ -144,26 +176,35 @@ sliderBtnRight.addEventListener('click', () => {
   }
 });
 
+/* Interaction with the slider on touchscreen devices */
+const slideLinks = document.body.querySelectorAll('.slide__link');
 
-const menuLinks = document.body.querySelectorAll('.menu__link');
+let clickTimer = null;
 
-const onMenuLinkCLick = (event) => {
-  const menuLink = event.target;
-
-  if (menuLink.dataset.link && document.body.querySelector(menuLink.dataset.link)) {
-    const goToBlock = document.querySelector(menuLink.dataset.link);
-    const goToBlockValue = goToBlock.getBoundingClientRect().top + scrollY - header.offsetHeight;
-
-    window.scrollTo({
-      top: goToBlockValue,
-    })
-
+const touchStart = (event) => {
+  if (clickTimer === null) {
+    event.currentTarget.parentNode.classList.add('slider__slide_active')
+    clickTimer = setTimeout(function () {
+      clickTimer = null;
+    }, 500);
     event.preventDefault();
+  } else {
+    clearTimeout(clickTimer);
+    clickTimer = null;
   }
 }
 
-if (menuLinks.length > 0) {
-  menuLinks.forEach(menuLink => {
-    menuLink.addEventListener('click', onMenuLinkCLick)
+if (slideLinks.length > 0) {
+  slideLinks.forEach(slideLink => {
+    slideLink.addEventListener('touchstart', event => {
+      touchStart(event);
+    });
   })
-}
+};
+document.body.addEventListener('touchstart', event => {
+  if (!event.target.classList.contains('slide__image')) {
+    slides.forEach(slide => {
+      slide.classList.remove('slider__slide_active');
+    })
+  }
+})
