@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/styles/shades-of-purple.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/favicon/favicon16.ico" sizes="16x16">
+  <link rel="icon" href="assets/favicon/favicon24.ico" sizes="24x24">
+  <link rel="icon" href="assets/favicon/favicon32.ico" sizes="32x32">
+  <title>Resume</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__container container">
+      <a class="header__logo" href="index.html">
+        <img class="header__logo-icon" src="assets/img/header/small-logo-header.gif" alt="Logo">
+      </a>
+      <span class="header__main-text">Resume</span>
+      <nav class="header__menu menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#" data-link=".about">About</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#" data-link=".skills">Skills</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#" data-link=".code">Code</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#" data-link=".experience">Experience</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#" data-link=".education">Education</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#" data-link=".english">English</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#" data-link=".contacts">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="header__burger-menu burger-menu" aria-label="Open menu">
+        <span class="burger-menu__line"></span>
+      </button>
+    </div>
+  </header>
+  <main>
+    <section class="main-info">
+      <div class="main-info__container container">
+        <div class="main-info__visual-content">
+          <img class="main-info__avatar" src="assets/img/main-info/avatar.jpg" alt="My photo">
+        </div>
+        <div class="main-info__text-content">
+          <h1 class="main-info__full-name">Sergei Gul</h1>
+          <p class="main-info__main-goal"><strong>My main goal</strong> is to become a successful IT developer.</p>
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <div class="about__container container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about__text-content">
+          <div class="about__column column">
+            <h3 class="column__title">Personal and business qualities:</h3>
+            <ul class="column__list">
+              <li class="column__item">responsiveness and politeness</li>
+              <li class="column__item">self-confidence</li>
+              <li class="column__item">the ability to achieve goals</li>
+              <li class="column__item">creative and systems thinking</li>
+              <li class="column__item">attention to details</li>
+              <li class="column__item">teamwork skills</li>
+              <li class="column__item">striving for professional development</li>
+            </ul>
+          </div>
+          <div class="about__column column">
+            <h3 class="column__title">Secondary goals:</h3>
+            <ul class="column__list">
+              <li class="column__item">learn JavaScript and master the profession of frond-end developer</li>
+              <li class="column__item">learn programming languages - С#, C++</li>
+              <li class="column__item">find a job related to IT</li>
+            </ul>
+          </div>
+          <div class="about__column column">
+            <h3 class="column__title">Hobbies:</h3>
+            <ul class="column__list">
+              <li class="column__item">volleyball</li>
+              <li class="column__item">outdoor activities</li>
+              <li class="column__item">visiting cinemas</li>
+              <li class="column__item">go camping with my friends</li>
+            </ul>
+          </div>
+        </div>
+        <div class="about__visual-content">
+          <img class="about__image" src="assets/img/about/man-walking-on-gears.png" alt="Man walking on gears">
+        </div>
+        <div class="about__visual-content">
+          <img class="about__image" src="assets/img/about/man-walking-on-gears.png" alt="Man walking on gears">
+        </div>
+      </div>
+    </section>
+    <section class="skills">
+      <div class="skills__container container">
+        <h2 class="skills__section-title section-title section-title_non-white-bg">Skills</h2>
+        <div class="skills__text-content">
+          <ul class="skills__list">
+            <li class="skills__item item">
+              <h4 class="item__title">HTML</h4>
+              <span class="item__progress"></span>
+            </li>
+            <li class="skills__item item">
+              <h4 class="item__title">CSS</h4>
+              <span class="item__progress"></span>
+            </li>
+            <li class="skills__item item">
+              <h4 class="item__title">JavaScript</h4>
+              <span class="item__progress"></span>
+            </li>
+            <li class="skills__item item">
+              <h4 class="item__title">TypeScript</h4>
+              <span class="item__progress"></span>
+            </li>
+            <li class="skills__item item">
+              <h4 class="item__title">Git</h4>
+              <span class="item__progress"></span>
+            </li>
+            <li class="skills__item item">
+              <h4 class="item__title">Figma</h4>
+              <span class="item__progress"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="code">
+      <div class="code__container container">
+        <h2 class="section-title">Code Examples</h2>
+        <div class="example">
+          <div class="example__item">
+            <a class="example__link" href="https://www.codewars.com/kata/56f935002e6c0d55fa000d92" target="_blank">Animals and Inheritance</a>
+            <pre class="example__code"><code class="javascript">
+class Shark extends Animal {
+  constructor(name, age, status) {
+    super(name, age, 0, 'shark', status);
+  }
+}
+
+class Cat extends Animal {
+  constructor(name, age, status) {
+    super(name, age, 4, 'cat', status);
+  }
+
+  introduce() {
+    return `${super.introduce()}  Meow meow!`;
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, age, status, master) {
+    super(name, age, 4, 'dog', status);
+    this.master = master;
+  }
+  
+  greetMaster() {
+    return `Hello ${this.master}`;
+  }
+}
+            </code></pre>
+          </div>
+          <div class="example__item">
+            <a class="example__link" href="https://www.codewars.com/kata/56fcc1ee45040039ab0016da" target="_blank">Cubes and Setters</a>
+            <pre class="example__code"><code class="javascript">
+class SiegeState {
+  constructor(canMove, damage) {
+    this.canMove = false;
+    this.damage = 20;  
+  }
+}
+
+class TankState {
+  constructor(canMove, damage) {
+    this.canMove = true;
+    this.damage = 5;  
+  }
+}
+
+class Tank {
+  constructor(state, canMove, damage) {
+    this.state = new TankState();    
+  }
+
+  get canMove() {
+    return this.state.canMove;
+  }
+  get damage() {
+    return this.state.damage;
+  }
+}
+            </code></pre>            
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="experience">
+      <div class="experience__container container">
+        <h2 class="experience__section-title section-title section-title_non-white-bg">Experience</h2>
+        <div class="experience__slider slider">
+          <button class="slider__btn-left" aria-label="Button to switch to the prev slide">
+            <img class="arrow-left" src="assets/svg/slider-arrow.svg" alt="Left arrow">
+          </button>
+          <div class="slider__container">
+            <div class="slider__content">
+              <figure class="slider__slide slide">
+                <a class="slide__link" href="https://github.com/ckachok/My-project-2020-2021/tree/wildlife" target="_blank">
+                  <img class="slide__image" src="assets/img/experience/wildlife.jpg" alt="Fox in the forest. Wildlife website.">
+                </a>
+                <figcaption class="slide__description">Wildlife</figcaption>
+              </figure>
+              <figure class="slider__slide slide">
+                <a class="slide__link" href="https://github.com/ckachok/My-project-2020-2021/tree/museum" target="_blank">
+                  <img class="slide__image" src="assets/img/experience/museum.jpg" alt="Louvre at night. Louvre website.">
+                </a>
+                <figcaption class="slide__description">Museum</figcaption>
+              </figure>
+              <figure class="slider__slide slide">
+                <a class="slide__link" href="https://github.com/ckachok/My-project-2020-2021/tree/online-zoo" target="_blank">
+                  <img class="slide__image" src="assets/img/experience/online-zoo.jpg" alt="The panda is eating bamboo. Online-zoo website">                  
+                </a>
+                <figcaption class="slide__description">Online zoo</figcaption>
+              </figure>
+              <figure class="slider__slide slide">
+                <a class="slide__link" href="https://github.com/ckachok/My-project-2020-2021/tree/vertical-slider" target="_blank">
+                  <img class="slide__image" src="assets/img/experience/vertical-slider.jpg" alt="Vertical slide webpage">
+                </a>
+                <figcaption class="slide__description">Vertical slider</figcaption>
+              </figure>
+              <figure class="slider__slide slide">
+                <a class="slide__link" href="https://github.com/ckachok/My-project-2020-2021/tree/custom-video-player" target="_blank">
+                  <img class="slide__image" src="assets/img/experience/custom-video-player.jpg" alt="Custom video player webpage">
+                </a>
+                <figcaption class="slide__description">Custom video<br>player</figcaption>
+              </figure>
+              <figure class="slider__slide slide">
+                <a class="slide__link" href="https://github.com/ckachok/My-project-2020-2021/tree/virtual-piano" target="_blank">
+                  <img class="slide__image" src="assets/img/experience/virtual-piano.jpg" alt="Virtual piano webpage">
+                </a>
+                <figcaption class="slide__description">Virtual piano</figcaption>
+              </figure>
+              <figure class="slider__slide slide">
+                <a class="slide__link" href="https://github.com/ckachok/My-project-2020-2021/tree/photo-filter" target="_blank">
+                  <img class="slide__image" src="assets/img/experience/photo-filter.jpg" alt="Photo filter webpage">
+                </a>
+                <figcaption class="slide__description">Photo filter</figcaption>
+              </figure>
+            </div>
+          </div>
+          <button class="slider__btn-right" aria-label="Button to switch to the next slide">
+            <img class="arrow-right" src="assets/svg/slider-arrow.svg" alt="Right arrow">
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="education">
+      <div class="education__container container">
+        <h2 class="section-title">Education</h2>
+        <div class="education__content">
+          <div class="education__text-content">
+            <ol class="education__list list-education_ordered">
+              <li class="list-education_ordered__item">
+                <strong>2007 - 2011</strong><br class="br"> (secondary special education) <br class="br"><strong>«Minsk State Higher Radio Engineering College»:</strong>
+                <ul class="education__list list-education_unordered">
+                  <li class="list-education_unordered__item">
+                    <strong><em>Department:</em></strong> radio engineering
+                  </li>
+                  <li class="list-education_unordered__item">
+                    <strong><em>Specialty:</em></strong> design and manufacture of radioelectronic facilities
+                  </li>
+                  <li class="list-education_unordered__item">
+                    <strong><em>Qualification:</em></strong> technician-technologist
+                  </li>
+                </ul>
+              </li>
+              <li class="list-education_ordered__item">
+                <strong>2011 - 2014</strong><br class="br"> (higher education) <br class="br"><strong>«Minsk State Higher Radio Engineering College»:</strong>
+                <ul class="education__list list-education_unordered">
+                  <li class="list-education_unordered__item">
+                    <strong><em>Faculty:</em></strong> professional training
+                  </li>
+                  <li class="list-education_unordered__item">
+                    <strong><em>Specialty:</em></strong> professional training (radioelectronics)
+                  </li>
+                  <li class="list-education_unordered__item">
+                    <strong><em>Qualification:</em></strong> teacher-engineer
+                  </li>
+                </ul>
+              </li>
+              <li class="list-education_ordered__item">
+                <strong>2020 - 2021</strong><br class="br"> (courses) <br class="br"><strong>«The Rolling Scopes»:</strong>
+                <ul class="education__list list-education_unordered">
+                  <li class="list-education_unordered__item">
+                    <strong><em>Direction:</em></strong> javascript / front-end
+                  </li>
+                  <li class="list-education_unordered__item">
+                    <strong><em>Status:</em></strong> active student
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+          <div class="education__visual-content">
+            <img class="education__image" src="assets/img/education/person-and-Newton's-cradle.png" alt="Person and Newton's Cradle">
+          </div>
+        </div>    
+      </div>
+    </section>
+    <section class="english">
+      <div class="english__container container">
+        <h2 class="english__section-title section-title section-title_non-white-bg">English</h2>    
+        <div class="english__content">
+          <div class="english__text-content">
+            <p class="english__text">
+              <span class="english__text english__text_big">A2 </span>
+              I continue to improve my level of English in the courses of the company  
+              <a class="english__link" href="https://mbg.by/" target="_blank">&laquo;World without Borders&raquo;</a>
+            </p>
+          </div>
+          <!-- <div class="english__visual-content">
+            <span class="english__text english__text_video">Video resume</span>
+            <iframe class="english__video" src="https://www.youtube.com/embed/OObOQ2GElhA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div> -->
+        </div>    
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="contacts__container container">
+        <h2 class="section-title">Contacts</h2>
+        <p class="contacts__text">You can contact me using the form or in another way convenient for you below.</p>
+        <form class="contacts__form form" action="#" autocomplete="off">
+          <input class="form__field form__field_name"
+                 id="form-name"
+                 type="text"
+                 name="name"
+                 placeholder="Your name"
+                 required>
+          <input class="form__field form__field_email"
+                 id="form-email"
+                 type="email"
+                 name="email"
+                 placeholder="Your e-mail"
+                 required>
+          <textarea class="form__field form__field_textarea"
+                    name="message"
+                    id="form-textarea"
+                    placeholder="Your message"
+                    required></textarea>
+          <button class="form__button"
+                  id="form-button"
+                  type="submit"
+                  aria-label="Send form">Send</button>
+        </form>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <strong>Email:</strong> mefelion89@gmail.com
+          </li>
+          <li class="contacts__item">
+            <strong>Discord:</strong> mef#0388
+          </li>
+          <li class="contacts__item">
+            <strong>Telegram:</strong> @Mefelion
+          </li>
+          <li class="contacts__item">
+            <strong>Instagram:</strong> instagram.com/mefilion/
+          </li>
+          <li class="contacts__item">
+            <strong>VK:</strong> vk.com/sergeans
+          </li>
+        </ul>    
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__container container">
+      <ul class="footer__social social">
+        <li class="social__item social__item_instagram">
+          <a class="social__link" href="https://www.instagram.com/mefilion/" target="_blank"></a>
+        </li>
+        <li class="social__item social__item_telegram">
+          <a class="social__link" href="https://t.me/Mefelion" target="_blank"></a>
+        </li>
+        <li class="social__item social__item_vk">
+          <a class="social__link" href="https://vk.com/sergeans" target="_blank"></a>
+        </li>
+        <li class="social__item social__item_github">
+          <a class="social__link" href="https://github.com/ckachok" target="_blank"></a>
+        </li>
+        <li class="social__item social__item_discord">
+          <a class="social__link" href="https://discord.gg/tVQtnFWc8c" target="_blank"></a>
+        </li>
+      </ul>
+      <span class="footer__copyright">© 2021 Mef,<br class="footer__br-copyright"> All Rights Reserved</span>
+      <a class="footer__logo" href="index.html">
+        <img class="footer__logo-icon" src="assets/img/footer/logo-footer.gif" alt="Logo">
+      </a>
+      <nav class="footer__menu menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#" data-link=".about">About</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#" data-link=".skills">Skills</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#" data-link=".code">Code</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#" data-link=".experience">Experience</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#" data-link=".education">Education</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#" data-link=".english">English</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#" data-link=".contacts">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="footer__logo-rsschool logo-rsschool" href="https://rs.school/js/" target="_blank">
+        <img class="logo-rsschool__icon" src="assets/svg/logo-rsshool.svg" alt="Logo">
+      </a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
